@@ -46,27 +46,25 @@ public class Billiard
     {
         System.out.println("\n*** Removing balls from the poolTable ***\n");
         final int SEED = 17;
-        Random random = new Random(SEED);//        Create Random object
-        // TODO Project1
+        Random random = new Random(SEED);        //Create Random object
+        // TODO - DONE
 
-
-//            otherwise (the ball number is greater than 1)
-//                put the “ball number” of randomly generated balls within range of [1 ... ball number – 1] on the table
-//                print appropriate message as shown in the sample run
-
-        while(!this.poolTable.isEmpty()){//        Repeat for as long as there are balls on the table:
-            Integer ball = this.poolTable.remove();//            remove random ball (call remove() method) and display its value
-            System.out.println("Removed ball = " + ball);
+        while(!this.poolTable.isEmpty()){           //Repeat for as long as there are balls on the table:
+            Integer ball = this.poolTable.remove();         //remove random ball (call remove() method) and display its value
+            System.out.println("--> Removed = " + ball);
 
 
             if (ball != 1){
+
                 for (int i = 0; i < ball; i++){
-                    this.poolTable.add(random.nextInt(ball -1) + 1);
+                    this.poolTable.add(random.nextInt(ball -1) + 1);//put the “ball number” of randomly generated balls within range of [1 ... ball number – 1] on the table
+
+
                 }
             }else {
-                System.out.println("Removed ball has number \"1\", no new balls will be added");//            if the ball number is 1 just print a message as shown in the sample run
+                System.out.println("Removed ball has number \"1\", no new balls will be added");          //if the ball number is 1 just print a message as shown in the sample run
             }
-            displayContentOfPoolTable();//        display the content of the bag
+            displayContentOfPoolTable();        //display the content of the bag
         }
 
 
