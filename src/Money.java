@@ -3,7 +3,7 @@ import java.util.Random;
 /**
  * An abstract class that implements a Money object.
  *
- * @author YOUR NAME
+ * @author Jamie Hernandez
  * @version 1/28/2020
  */
 public abstract class Money
