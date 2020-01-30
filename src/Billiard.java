@@ -4,8 +4,8 @@ import java.util.*;
  * This class determines how long it would take to remove billiard balls from a poolTable,
  * where ball n is replaced by n balls with randomly generated numbers between 1 and n-1.
  *
- * @version 1/28/2020
- * @updatedBy YOUR NAME GOES HERE
+ * @version 1/30/2020
+ * @updatedBy Jamie Hernandez
  */
 public class Billiard
 {
@@ -46,20 +46,29 @@ public class Billiard
     {
         System.out.println("\n*** Removing balls from the poolTable ***\n");
         final int SEED = 17;
-        Random random = new Random(SEED);
+        Random random = new Random(SEED);//        Create Random object
         // TODO Project1
-//        Create Random object
-//        Repeat for as long as there are balls on the table:
-//            remove random ball (call remove() method) and display its value
-//            if the ball number is 1 just print a message as shown in the sample run
+
+
 //            otherwise (the ball number is greater than 1)
 //                put the “ball number” of randomly generated balls within range of [1 ... ball number – 1] on the table
 //                print appropriate message as shown in the sample run
 
-        while(!this.poolTable.isEmpty()){
+        while(!this.poolTable.isEmpty()){//        Repeat for as long as there are balls on the table:
+            Integer ball = this.poolTable.remove();//            remove random ball (call remove() method) and display its value
+            System.out.println("Removed ball = " + ball);
 
+
+            if (ball != 1){
+                for (int i = 0; i < ball; i++){
+                    this.poolTable.add(random.nextInt(ball -1) + 1);
+                }
+            }else {
+                System.out.println("Removed ball has number \"1\", no new balls will be added");//            if the ball number is 1 just print a message as shown in the sample run
+            }
+            displayContentOfPoolTable();//        display the content of the bag
         }
-        displayContentOfPoolTable();//        display the content of the bag
+
 
 
         System.out.println("\nThe poolTable is empty!!!");
