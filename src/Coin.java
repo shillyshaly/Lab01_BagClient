@@ -9,4 +9,12 @@ public class Coin extends Money{
         CoinDenomination[] cd = CoinDenomination.values();
         this.coinDenomination = cd[random.nextInt(cd.length)];
     }
+
+    public double getValue() {
+        return 0;
+    }
+
+    public String toString() {
+        return null;
+    }
 }
