@@ -12,18 +12,27 @@ public abstract class Money
 
     public Money()
     {
-        // TODO Project2
+        // TODO Project2 - DONE
+        this.heads = false;
     }
 
     public void toss()
     {
-        // TODO Project2
+        // TODO Project2 - DONE
+        Random random = new Random();
+        int flip = random.nextInt(2);
+        if (flip != 0){
+            this.heads = false;
+        }else{
+            this.heads = true;
+        }
     }
 
     public boolean isHeads()
     {
-        // TODO Project2
-        return false; // THIS IS A STUB
+        // TODO Project2 - DONE
+
+        return this.heads; // THIS IS A STUB
     }
 
     public abstract double getValue();
