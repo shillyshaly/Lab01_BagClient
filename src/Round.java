@@ -6,9 +6,9 @@
  */
 public class Round
 {
-    // TODO Project2 - the next line is commented out so the class compiles for now
-    // TODO Project2 - uncomment once PiggyBank class is implemented
-    //private PiggyBank myPiggyBank;
+    // TODO Project2 - the next line is commented out so the class compiles for now - DONE
+    // TODO Project2 - uncomment once PiggyBank class is implemented - DONE
+    private PiggyBank myPiggyBank;
 
     public Round(int numberOfMonies, int capacity)
     {

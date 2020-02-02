@@ -10,7 +10,7 @@ public class Bill extends Money {
     }
 
     public double getValue() {
-        return 0;
+        return this.billDenomination.getBillValue();
     }
     public String toString() {
         return null;

@@ -31,7 +31,6 @@ public abstract class Money
     public boolean isHeads()
     {
         // TODO Project2 - DONE
-
         return this.heads; // THIS IS A STUB
     }
 

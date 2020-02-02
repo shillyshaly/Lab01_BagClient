@@ -1,6 +1,5 @@
 import java.util.*;
 
-
 public class Coin extends Money{
     private CoinDenomination coinDenomination;
     public Coin(){
@@ -11,10 +10,10 @@ public class Coin extends Money{
     }
 
     public double getValue() {
-        return 0;
+        return this.coinDenomination.getCoinValue();
     }
 
     public String toString() {
-        return null;
+        return this.coinDenomination + " landed " + this.coinDenomination.name();
     }
 }
