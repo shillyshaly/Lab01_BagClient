@@ -1,4 +1,10 @@
 import java.util.*;
+/**
+ * implements the Coin object extended from Money
+ *
+ *@updatedBy Jamie Hernandez
+ * @version 2/1/2020
+ */
 
 public class Coin extends Money {
     private CoinDenomination coinDenomination;

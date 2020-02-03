@@ -1,11 +1,11 @@
 import java.util.Random;
-
 /**
  * An abstract class that implements a Money object.
  *
  * @author Jamie Hernandez
  * @version 1/28/2020
  */
+
 public abstract class Money
 {
     private boolean heads;
