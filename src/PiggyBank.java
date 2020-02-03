@@ -11,7 +11,7 @@ public class PiggyBank {
         if (numberOfMonies >= capacity){
             numberOfMonies = capacity;
         }
-        for (int i = 0; i < numberOfMonies; i++) {
+        for (int i = 0; i <= numberOfMonies; i++) {
             Money coin = new Coin();
             Money bill = new Bill();
             Random random = new Random();
@@ -59,7 +59,6 @@ public class PiggyBank {
     }
 
     public int getNumberOfMonies() {
-        System.out.println(this.jar.getCurrentSize());
         return this.jar.getCurrentSize();
     }
 
