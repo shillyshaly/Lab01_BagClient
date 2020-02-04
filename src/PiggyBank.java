@@ -121,14 +121,17 @@ public class PiggyBank {
     public void shake() {
         Object[] toShake = this.jar.toArray();
         Random random = new Random();
+        double total = 0.00;
 
         System.out.println(">> Shaking your piggy bank <<");
+
         for (int i = 0; i < toShake.length; i++) {
             Collections.swap(Arrays.asList(toShake), i, random.nextInt(this.jar.getCurrentSize()));
         }
         while (!this.jar.isEmpty()) {
             this.jar.remove();
         }
+
         for (Object obj : toShake) {
             this.jar.add((Money) obj);
         }
@@ -145,6 +148,13 @@ public class PiggyBank {
         Object[] list = this.jar.toArray();
         System.out.println(">> Emptying your piggy bank <<");
         for (int i = 0; i < list.length; i++) {
+            System.out.println(list[i].toString());
+            if (((Money) list[i]).isHeads()) {
+                heads++;
+                total += ((Money) list[i]).getValue();
+            }
+            this.jar.remove();
+        }for (int i = 0; i < list.length; i++) {
             System.out.println(list[i].toString());
             if (((Money) list[i]).isHeads()) {
                 heads++;
