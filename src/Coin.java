@@ -17,10 +17,18 @@ public class Coin extends Money {
         this.coinDenomination = cd[random.nextInt(cd.length)];
     }
 
+    /**
+     *
+     * @return value of coin denomination
+     */
     public double getValue() {
         return this.coinDenomination.getCoinValue();
     }
 
+    /**
+     *
+     * @return coin denomination and what side it landed (heads/tails)
+     */
     public String toString() {
         this.toss();
         String coinSide;

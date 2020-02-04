@@ -10,11 +10,18 @@ import java.util.Random;
 public abstract class Money {
     private boolean heads;
 
+    /**
+     * constructor for Money object
+     * sets heads to false
+     */
     public Money() {
         // TODO Project2 - DONE
         this.heads = false;
     }
 
+    /**
+     * simulates coin toss to randomly decide which side coin/bill lands on
+     */
     public void toss() {
         // TODO Project2 - DONE
         Random random = new Random();
@@ -27,9 +34,13 @@ public abstract class Money {
         }
     }
 
+    /**
+     *
+     * @return if the object landed heads or tails
+     */
     public boolean isHeads() {
         // TODO Project2 - DONE
-        return this.heads; // THIS IS A STUB
+        return this.heads;
     }
 
     public abstract double getValue();
