@@ -1,4 +1,10 @@
 import java.util.Random;
+/**
+ * create a Bill object.
+ *
+ * @author Jamie Hernandez
+ * @version 1/28/2020
+ */
 
 /**
  * create a Bill object.
