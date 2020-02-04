@@ -1,8 +1,16 @@
 import java.util.Random;
 
+/**
+ * create a Bill object.
+ *
+ * @author Jamie Hernandez
+ * @version 1/28/2020
+ */
+
 public class Bill extends Money {
     private BillDenomination billDenomination;
-    public Bill(){
+
+    public Bill() {
         super();
         Random random = new Random();
         BillDenomination[] bd = BillDenomination.values();
@@ -12,7 +20,16 @@ public class Bill extends Money {
     public double getValue() {
         return this.billDenomination.getBillValue();
     }
+
     public String toString() {
-        return null;
+        this.toss();
+        String billSide;
+        if (!this.isHeads()) {
+            billSide = "TAILS";
+        }
+        else {
+            billSide = "HEADS";
+        }
+        return this.billDenomination.name() + " landed " + billSide;
     }
 }

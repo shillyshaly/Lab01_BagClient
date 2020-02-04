@@ -1,8 +1,16 @@
 import java.util.*;
 
-public class Coin extends Money{
+/**
+ * implements the Coin object extended from Money
+ *
+ * @version 2/1/2020
+ * @updatedBy Jamie Hernandez
+ */
+
+public class Coin extends Money {
     private CoinDenomination coinDenomination;
-    public Coin(){
+
+    public Coin() {
         super();
         Random random = new Random();
         CoinDenomination[] cd = CoinDenomination.values();
@@ -14,6 +22,14 @@ public class Coin extends Money{
     }
 
     public String toString() {
-        return this.coinDenomination + " landed " + this.coinDenomination.name();
+        this.toss();
+        String coinSide;
+        if (!this.isHeads()) {
+            coinSide = "TAILS";
+        }
+        else {
+            coinSide = "HEADS";
+        }
+        return this.coinDenomination.name() + " landed " + coinSide;
     }
 }

@@ -9,10 +9,12 @@ public enum BillDenomination {
     JACKSON(20), GRANT(50), FRANKLIN(100);
 
     private int billValue;
-    private BillDenomination(int billValue){
+
+    private BillDenomination(int billValue) {
         this.billValue = billValue;
     }
-    public int getBillValue(){
+
+    public int getBillValue() {
         return this.billValue;
     }
 
